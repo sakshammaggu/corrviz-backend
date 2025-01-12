@@ -17,7 +17,7 @@ const uploadFile = async (req: Request, res: Response): Promise<void> => {
         const filePath = path.resolve(file.destination, file.filename);
         const csvData = fs.readFileSync(filePath, "utf-8");
 
-        const pythonServiceUrl = "http://127.0.0.1:8080/api/process-csv"; 
+        const pythonServiceUrl = "https://sakshammaggu-corrviz-python-microservice.onrender.com/api/process-csv"; 
         const pythonResponse = await axios.post(pythonServiceUrl, {
             filename: file.originalname,
             data: csvData,
