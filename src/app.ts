@@ -15,6 +15,7 @@ app.use('/api', fileUploadRoute);
 app.use('/api/users', userRoutes);
 
 app.listen(port, async()=>{
-    log.info(`App is running at port http://localhost:${port}`);
+    // log.info(`App is running at port http://localhost:${port}`);
+    log.info(`App is running at port https://sakshammaggu-corrviz-backend.onrender.com/`);
     await connectMongoDb();
 });
